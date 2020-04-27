@@ -27,7 +27,7 @@ const Home = (props) => {
 
     return (
         <section className='home'>
-            <Container>
+            <Container> 
                 <Row className='mt-3'>
                     <Col md="9"  className='mt-3'>
                         <ul className='list-unstyled list-teams'>
