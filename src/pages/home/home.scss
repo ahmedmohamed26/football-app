@@ -1,0 +1,43 @@
+@import "../../scss/variables";
+.home{
+    .list-teams{
+        background: #fff;
+        border-radius: $border-radius;
+      li{
+          position: relative;
+        padding: .75rem 1rem;
+          cursor: pointer;
+          &:hover{
+              background: $active-background;
+          }
+          &:after{
+              content: '';
+              position: absolute;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              margin: auto;
+              width: 100%;
+              height: 1px;
+              background: $gray-light;
+          }
+          &:last-child:after{
+              display: none;
+          }
+          .parent{
+                 align-items: center;
+                 display: flex;
+              img{
+                  width: 30px;
+                  height: 30px;
+              }
+              h2{
+                  font-size: $regular-size;
+                  color: $gray-dark;
+                  margin-bottom: 0;
+                  margin: 0 .5rem; 
+              }
+          }
+      }
+    }
+}
