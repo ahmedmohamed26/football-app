@@ -12,15 +12,14 @@ const Home = (props) => {
     useEffect(() => {
         getLeague('l=English%20Premier%20League').then(response  => {
             setCompetitions(response.data.teams)
-            console.log(response)
+            // console.log(response)
         }).catch(err=> console.log(err));
     },[])
 
     const ClickGetLeague = (props) => {
         getLeague(props).then(response  => {
             setCompetitions(response.data.teams)
-            console.log(response)
-            console.log(Competitions)
+            // console.log(response)
         }).catch(err=> console.log(err));
     }
     
@@ -31,8 +30,8 @@ const Home = (props) => {
                 <Row className='mt-3'>
                     <Col md="9"  className='mt-3'>
                         <ul className='list-unstyled list-teams'>
-                        {Competitions.map(item => (
-                                    <li className='d-flex' key={item.id}>
+                        {Competitions.map((item,index) => (
+                                    <li className='d-flex' key={index + 1}>
                                         <div className='parent'>
                                             <img src={item.strTeamBadge} alt={item.strTeam}  />
                                             <h2 >{item.strTeam}</h2>
