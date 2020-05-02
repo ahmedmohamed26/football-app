@@ -1,63 +1,94 @@
 @import "../../scss/variables";
-
-.team-details{
-    .parent{
+.team-details {
+    padding: 20px 0;
+    .parent {
         background: #fff;
         border-radius: $border-radius;
         padding: $padding;
-        .title{
+        margin-top: $margin-top;
+        .title {
             img {
                 width: $widthImg;
                 height: $heightImg;
             }
-            h6{
+            h6 {
                 color: $gray;
                 font-size: $regular-size;
             }
-            h2{
+            h2 {
                 color: $title;
-                font-size:$large-bold;
+                font-size: $large-bold;
                 font-weight: $bold;
                 text-transform: uppercase;
             }
-            h5{
+            h5 {
                 color: $gray;
-                font-size:$medium-light;
+                font-size: $medium-light;
             }
         }
-        .last-match{
+        .details-team {
+            img {
+                width: 100%;
+                height: 300px;
+                border-radius: $border-radius;
+            }
+            h1 {
+                color: $title;
+                font-size: $large-bold;
+                font-weight: $bold;
+                text-transform: uppercase;
+                margin-top: $default-margin-top;
+            }
+            p {
+                font-size: $regular-size;
+                color: $gray;
+                line-height: 1.5;
+            }
+            ul {
+                li {
+                    a {
+                        text-decoration: none;
+                        margin-right: 1rem;
+                        color: $gray;
+                        border-radius: $border-radius;
+                        box-shadow: $box-shadow;
+                    }
+                }
+            }
+        }
+        .details-match {
             margin-top: $margin-top;
-            h2{
+            h2 {
                 font-size: $medium-bold;
                 color: $title;
                 text-transform: capitalize;
                 font-weight: $bold;
             }
-            .date-match{
+            .date-match {
                 background-color: $light-background;
                 border-radius: $border-curve;
                 padding: $padding;
-                h4{
+                h4 {
                     margin-bottom: $margin-bottom;
+                    font-size: $medium-bold;
                 }
                 img {
                     width: $widthImg;
                     height: $heightImg;
                     margin-bottom: 10px;
                 }
-                h6{
+                h6 {
                     text-transform: uppercase;
-                    font-size: $medium-bold;
+                    font-size: $regular-size;
                     color: $gray-dark;
                     font-weight: $bold;
                 }
-                h5{
+                h5 {
                     color: $gray;
-                    font-size: $medium-bold;
-                    margin-top: $margin-top
+                    font-size: $medium-light;
+                    margin-top: $margin-top;
                 }
             }
         }
-        
     }
 }

@@ -1,30 +1,30 @@
 header {
     box-shadow: 0 0 5px rgba(121, 121, 121, .3);
-    .navbar-brand{
-        padding:1rem 0;
+    .navbar-brand {
+        padding: 1rem 0;
         color: #777;
         font-weight: 700;
     }
-    .navbar{
+    .navbar {
         padding: 0;
         background: #fff;
         ul {
-            padding:1rem 0 ;
+            padding: 1rem 0;
             margin-bottom: 0;
             display: flex;
-            li{
+            li {
                 margin-right: 1rem;
                 cursor: pointer;
-                .nav-item{
+                .nav-item {
                     color: #777;
                     font-weight: 700;
                     text-transform: capitalize;
                     text-decoration: none;
                 }
-                .active{
-                    color:#007bff;
+                .active {
+                    color: #007bff;
                 }
             }
         }
     }
-}  
+}
