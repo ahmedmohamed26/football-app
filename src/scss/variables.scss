@@ -5,19 +5,26 @@ $gray-light:#ddd;
 $title:#3a0115;
 $secondary:#3a3a3a;
 $active-background:#f2f2f2;
+$light-background:#eaeaea;
 
 
 
 
 
 // general
+$widthImg :60px;
+$heightImg :60px;
+$padding: .75rem 1rem;
+$margin-top:20px;
+$margin-bottom:10px;
+$bold:700;
 $border-radius: 0.5rem;
-$border-curve: 1.2rem;
+$border-curve: 2rem;
 $transition:all .2s ease-in-out;
 $box-shadow: 0rem 2rem 5rem rgba(0, 0, 0, 0.2);
-$large-bold: 2.857rem; // 40px
-$large-light: 1.785rem; // 25px
+$large-bold: 1.785rem; // 25px
+$large-light: 1.25rem; // 20px
 $medium-bold: 1.214rem; // 17px
-$medium-light: 0.785rem; // 11px
 $regular-size: 1rem; // 14px
+$medium-light: 0.785rem; // 11px
 $button-text: 0.928rem; // 13px

@@ -1,0 +1,63 @@
+@import "../../scss/variables";
+
+.team-details{
+    .parent{
+        background: #fff;
+        border-radius: $border-radius;
+        padding: $padding;
+        .title{
+            img {
+                width: $widthImg;
+                height: $heightImg;
+            }
+            h6{
+                color: $gray;
+                font-size: $regular-size;
+            }
+            h2{
+                color: $title;
+                font-size:$large-bold;
+                font-weight: $bold;
+                text-transform: uppercase;
+            }
+            h5{
+                color: $gray;
+                font-size:$medium-light;
+            }
+        }
+        .last-match{
+            margin-top: $margin-top;
+            h2{
+                font-size: $medium-bold;
+                color: $title;
+                text-transform: capitalize;
+                font-weight: $bold;
+            }
+            .date-match{
+                background-color: $light-background;
+                border-radius: $border-curve;
+                padding: $padding;
+                h4{
+                    margin-bottom: $margin-bottom;
+                }
+                img {
+                    width: $widthImg;
+                    height: $heightImg;
+                    margin-bottom: 10px;
+                }
+                h6{
+                    text-transform: uppercase;
+                    font-size: $medium-bold;
+                    color: $gray-dark;
+                    font-weight: $bold;
+                }
+                h5{
+                    color: $gray;
+                    font-size: $medium-bold;
+                    margin-top: $margin-top
+                }
+            }
+        }
+        
+    }
+}
