@@ -9,26 +9,24 @@ import { Link } from 'react-router-dom';
 const Home = (props) => {
 	const [Competitions, setCompetitions] = useState([]);
 	useEffect(() => {
-		// console.log(props)
-		getLeague('l=English%20Premier%20League')
-			.then((response) => {
-				setCompetitions(response.data.teams);
-			})
-			.catch((err) => console.log(err));
+		getAllLeague();
 	}, []);
+
+	function getAllLeague() {
+		getLeague('l=English%20Premier%20League')
+			.then(({ data }) => setCompetitions(data.teams))
+			.catch((error) => {
+				throw new Error(error.message);
+			});
+	}
 
 	const ClickGetLeague = (props) => {
 		getLeague(props)
-			.then((response) => {
-				setCompetitions(response.data.teams);
-				console.log(response);
-			})
-			.catch((err) => console.log(err));
+			.then(({ data }) => setCompetitions(data.teams))
+			.catch((error) => {
+				throw new Error(error.message);
+			});
 	};
-
-	//    function goToTeam(item){
-	//         console.log(item)
-	//     }
 
 	return (
 		<section className='home'>

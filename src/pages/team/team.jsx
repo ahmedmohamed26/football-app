@@ -20,19 +20,14 @@ const Team = (props) => {
 
 	const getTeamDetails = () => {
 		TeamDetails(ID)
-			.then(({ data }) => {
-				console.log(data);
-				setTeam(data.teams[0]);
-			})
+			.then(({ data }) => setTeam(data.teams[0]))
 			.catch((error) => {
 				throw new Error(error.message);
 			});
 	};
 	function getNextMatch() {
 		NextMatch(ID)
-			.then(({ data }) => {
-				setNextMatch(data.events[0]);
-			})
+			.then(({ data }) => setNextMatch(data.events[0]))
 			.catch((error) => {
 				throw new Error(error.message);
 			});
@@ -41,7 +36,9 @@ const Team = (props) => {
 	function getLastMatch() {
 		LastMatch(ID)
 			.then(({ data }) => setLastMatch(data.results[0]))
-			.catch((err) => console.log(err));
+			.catch((error) => {
+				throw new Error(error.message);
+			});
 	}
 
 	return (
