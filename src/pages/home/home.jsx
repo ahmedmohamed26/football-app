@@ -32,7 +32,7 @@ const Home = (props) => {
 		<section className='home'>
 			<Container>
 				<Row className='mt-3'>
-					<Col md='9' className='mt-3'>
+					<Col md='9' className='mt-3 colOne'>
 						<ul className='list-unstyled list-teams'>
 							{Competitions.length > 0 ? (
 								Competitions.map((item, index) => (
@@ -51,7 +51,7 @@ const Home = (props) => {
 							)}
 						</ul>
 					</Col>
-					<Col md='3' className='mt-3'>
+					<Col md='3' className='mt-3 colTwo'>
 						<Leagues ClickGetLeague={ClickGetLeague} />
 					</Col>
 				</Row>

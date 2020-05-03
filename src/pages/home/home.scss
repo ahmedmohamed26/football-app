@@ -42,3 +42,16 @@
         }
     }
 }
+
+@media(max-width:768px){
+    .home{
+        .colOne{
+            -webkit-order: 2; /* Safari 6.1+ */
+            order: 2;
+        }
+        .colTwo{
+            -webkit-order: 1; /* Safari 6.1+ */
+            order:1;
+        }
+    }
+}
