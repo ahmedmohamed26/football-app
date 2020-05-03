@@ -8,21 +8,30 @@ import Loading from '../../components/loading/loading';
 import { Link } from 'react-router-dom';
 const Home = (props) => {
 	const [Competitions, setCompetitions] = useState([]);
+	const [loadSpinner, setloadSpinner] = useState(false);
 	useEffect(() => {
 		getAllLeague();
 	}, []);
 
 	function getAllLeague() {
+		setloadSpinner(true)
 		getLeague('l=English%20Premier%20League')
-			.then(({ data }) => setCompetitions(data.teams))
+			.then(({ data }) => {
+				setCompetitions(data.teams)
+				setloadSpinner(false)
+			})
 			.catch((error) => {
 				throw new Error(error.message);
 			});
 	}
 
 	const ClickGetLeague = (props) => {
+		setloadSpinner(true)
 		getLeague(props)
-			.then(({ data }) => setCompetitions(data.teams))
+			.then(({ data }) => {
+				setCompetitions(data.teams)
+				setloadSpinner(false)
+			})
 			.catch((error) => {
 				throw new Error(error.message);
 			});
@@ -34,7 +43,7 @@ const Home = (props) => {
 				<Row className='mt-3'>
 					<Col md='9' className='mt-3 colOne'>
 						<ul className='list-unstyled list-teams'>
-							{Competitions.length > 0 ? (
+							{!loadSpinner  ? (
 								Competitions.map((item, index) => (
 									<Link
 										className='d-flex item-team'
