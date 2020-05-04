@@ -2,8 +2,8 @@ import React, { useState, useEffect ,Fragment} from 'react';
 import './team.scss';
 import {
 	TeamDetails,
-	LastMatch,
-	NextMatch
+	LastEventMatch,
+	NextEventMatch
 } from './../../services/competitions';
 import { Col, Container, Row } from 'reactstrap';
 import defaultTeamLogo from '../../assets/images/defaultTeamLogo.png';
@@ -15,7 +15,7 @@ const Team = (props) => {
 	const [nextMatch, setNextMatch] = useState();
 	const [lastMatch, setLastMatch] = useState();
 	const [loadSpinner, setloadSpinner] = useState(false);
-	let ID = props.match.params.id;
+	const {id} = props.match.params;
 	useEffect(() => {
 		getTeamDetails();
 		getNextMatch();
@@ -24,7 +24,7 @@ const Team = (props) => {
 
 	const getTeamDetails = () => {
 		setloadSpinner(true)
-		TeamDetails(ID)
+		TeamDetails(id)
 			.then(({ data }) => {
 				setTeam(data.teams[0])
 				setloadSpinner(false)
@@ -35,7 +35,7 @@ const Team = (props) => {
 	};
 	function getNextMatch() {
 		setloadSpinner(true)
-		NextMatch(ID)
+		NextEventMatch(id)
 			.then(({ data }) => {
 				setNextMatch(data.events[0])
 				setloadSpinner(false)
@@ -47,7 +47,7 @@ const Team = (props) => {
 
 	function getLastMatch() {
 		setloadSpinner(true)
-		LastMatch(ID)
+		LastEventMatch(id)
 			.then(({ data }) => {
 				setLastMatch(data.results[0])
 				setloadSpinner(false)

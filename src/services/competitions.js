@@ -22,14 +22,14 @@ export async function TeamDetails(idTeam) {
     return response;
 }
 
-export async function NextMatch(idTeam) {
+export async function NextEventMatch(idTeam) {
     let response = await axios.get(`${apiUrl}/eventsnext.php?id=${idTeam}`, {
         headers
     })
     return response;
 }
 
-export async function LastMatch(idTeam) {
+export async function LastEventMatch(idTeam) {
     let response = await axios.get(`${apiUrl}/eventslast.php?id=${idTeam}`, {
         headers
     })

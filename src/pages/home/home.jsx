@@ -4,9 +4,9 @@ import { getLeague } from './../../services/competitions';
 import { Row, Col, Container } from 'reactstrap';
 import './home.scss';
 import Loading from '../../components/loading/loading';
-
 import { Link } from 'react-router-dom';
-const Home = (props) => {
+
+const Home = () => {
 	const [Competitions, setCompetitions] = useState([]);
 	const [loadSpinner, setloadSpinner] = useState(false);
 	useEffect(() => {
