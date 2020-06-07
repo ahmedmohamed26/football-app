@@ -7,6 +7,9 @@
         padding: $padding;
         margin-top: $margin-top;
         .title {
+            background-color: #eaeaea;
+            padding: $padding;
+            border-radius: $border-radius;
             img {
                 width: $widthImg;
                 height: $heightImg;
