@@ -11,9 +11,10 @@ const Home = () => {
 	const [loadSpinner, setloadSpinner] = useState(false);
 	useEffect(() => {
 		getAllLeague();
+		// getAllMovies();
 	}, []);
 
-	function getAllLeague() {
+	function getAllLeague() { 
 		setloadSpinner(true)
 		getLeague('l=English%20Premier%20League')
 			.then(({ data }) => {
@@ -36,6 +37,16 @@ const Home = () => {
 				throw new Error(error.message);
 			});
 	};
+
+
+
+	// function getAllMovies() {
+	// 	getMovies()
+	// 		.then((data) => {
+	// 			console.log(data)
+	// 		})
+	// }
+	
 
 	return (
 		<section className='home'>
